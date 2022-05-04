@@ -28,19 +28,19 @@ protocol DetailsPhotoViewInput: AnyObject {
 final class DetailsPhotoViewController: UIViewController {
     
     /// ID Photo
-    var id: String
+    private var id: String
     
     /// Модель деталей фотографии
     var detailsPhoto = DetailPhoto()
     
     /// Realm
-    lazy var realm = RealmManager.shared
+    private lazy var realm = RealmManager.shared
     
     /// Флаг наличия фотки в БД Реалм-а
-    var flagFavorit = Bool()
+    private var flagFavorit = Bool()
     
     /// Получим фотки из БД
-    var likedPhoto: Results<RealmModelPhoto>? {
+    private var likedPhoto: Results<RealmModelPhoto>? {
         realm?.getObject(type: RealmModelPhoto.self)
     }
     

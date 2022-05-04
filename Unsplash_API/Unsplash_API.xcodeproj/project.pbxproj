@@ -19,6 +19,9 @@
 		591AE684282267DB003CF8CF /* DetailsPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591AE683282267DB003CF8CF /* DetailsPhotoView.swift */; };
 		591AE68728227729003CF8CF /* LikedPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591AE68628227729003CF8CF /* LikedPhotoView.swift */; };
 		591AE68928227754003CF8CF /* LikedPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591AE68828227754003CF8CF /* LikedPhotoTableViewCell.swift */; };
+		591AE68B28227868003CF8CF /* LikedPhotoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591AE68A28227868003CF8CF /* LikedPhotoViewOutput.swift */; };
+		591AE68F28227ABD003CF8CF /* LikedPhotoPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591AE68E28227ABD003CF8CF /* LikedPhotoPresentor.swift */; };
+		591AE69128227B36003CF8CF /* LikedPhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591AE69028227B36003CF8CF /* LikedPhotoRouter.swift */; };
 		594992E92822478D00E8F3A4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594992E82822478D00E8F3A4 /* TabBarController.swift */; };
 		594992ED2822486700E8F3A4 /* LikedPhotoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594992EC2822486700E8F3A4 /* LikedPhotoBuilder.swift */; };
 		594992F3282248E000E8F3A4 /* LikedPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594992F2282248E000E8F3A4 /* LikedPhotoViewController.swift */; };
@@ -56,6 +59,9 @@
 		591AE683282267DB003CF8CF /* DetailsPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPhotoView.swift; sourceTree = "<group>"; };
 		591AE68628227729003CF8CF /* LikedPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPhotoView.swift; sourceTree = "<group>"; };
 		591AE68828227754003CF8CF /* LikedPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		591AE68A28227868003CF8CF /* LikedPhotoViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPhotoViewOutput.swift; sourceTree = "<group>"; };
+		591AE68E28227ABD003CF8CF /* LikedPhotoPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPhotoPresentor.swift; sourceTree = "<group>"; };
+		591AE69028227B36003CF8CF /* LikedPhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPhotoRouter.swift; sourceTree = "<group>"; };
 		594992E82822478D00E8F3A4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		594992EC2822486700E8F3A4 /* LikedPhotoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPhotoBuilder.swift; sourceTree = "<group>"; };
 		594992F2282248E000E8F3A4 /* LikedPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPhotoViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +172,22 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		591AE68C28227A2B003CF8CF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				591AE69028227B36003CF8CF /* LikedPhotoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		591AE68D28227A34003CF8CF /* Presentor */ = {
+			isa = PBXGroup;
+			children = (
+				591AE68E28227ABD003CF8CF /* LikedPhotoPresentor.swift */,
+			);
+			path = Presentor;
+			sourceTree = "<group>";
+		};
 		594992E72822476700E8F3A4 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +215,8 @@
 		594992EE2822489100E8F3A4 /* LikedPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				591AE68D28227A34003CF8CF /* Presentor */,
+				591AE68C28227A2B003CF8CF /* Router */,
 				594992F0282248C200E8F3A4 /* ViewController */,
 			);
 			path = LikedPhoto;
@@ -214,6 +238,7 @@
 			children = (
 				594992F1282248D100E8F3A4 /* View */,
 				594992F2282248E000E8F3A4 /* LikedPhotoViewController.swift */,
+				591AE68A28227868003CF8CF /* LikedPhotoViewOutput.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -490,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591AE69128227B36003CF8CF /* LikedPhotoRouter.swift in Sources */,
 				59499319282251CB00E8F3A4 /* HashImageService.swift in Sources */,
 				594992ED2822486700E8F3A4 /* LikedPhotoBuilder.swift in Sources */,
 				591AE68928227754003CF8CF /* LikedPhotoTableViewCell.swift in Sources */,
@@ -499,6 +525,7 @@
 				5949930328224BED00E8F3A4 /* ModelDetailPhoto.swift in Sources */,
 				5949930128224BD000E8F3A4 /* ModelCollectionPhoto.swift in Sources */,
 				594993202822572800E8F3A4 /* SearchPhotoInteractor.swift in Sources */,
+				591AE68F28227ABD003CF8CF /* LikedPhotoPresentor.swift in Sources */,
 				591AE684282267DB003CF8CF /* DetailsPhotoView.swift in Sources */,
 				594993222822580800E8F3A4 /* SearchPhotoRouter.swift in Sources */,
 				591AE67C282265BD003CF8CF /* DetaildPhotoBuilder.swift in Sources */,
@@ -518,6 +545,7 @@
 				5949930828224C5400E8F3A4 /* NetworkService.swift in Sources */,
 				5949931C2822554A00E8F3A4 /* SearchPhotoPresentor.swift in Sources */,
 				594992FE28224AF500E8F3A4 /* Extension+UITableViewCell.swift in Sources */,
+				591AE68B28227868003CF8CF /* LikedPhotoViewOutput.swift in Sources */,
 				5949930D28224F2400E8F3A4 /* SearchPhotoView.swift in Sources */,
 				591AE67728226283003CF8CF /* RealmModel.swift in Sources */,
 			);

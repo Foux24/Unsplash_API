@@ -28,7 +28,7 @@ final class LikedPhotoTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .black
-        label.backgroundColor = .white
+        label.backgroundColor = .clear
         label.numberOfLines = 0
         return label
     }()

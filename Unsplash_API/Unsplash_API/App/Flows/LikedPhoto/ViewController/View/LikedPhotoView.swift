@@ -54,6 +54,7 @@ final class LikedPhotoView: UIView {
     /// Инициализтор
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .white
         self.setupTableView()
         self.setupConstreints()
     }
