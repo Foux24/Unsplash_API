@@ -9,7 +9,15 @@ import Alamofire
 
 /// Входящий протокол интерактора
 protocol SearchPhotoInteractorInput {
+    
+    /// Загрузка рендомных фото
+    /// - Parameter comlpletion: Блок обрабатывающий запрос
     func loadRendomPhoto(completion: @escaping (Result<[CollectionPhoto], FriendsError>) -> Void)
+    
+    /// Поиск фото по тексту
+    /// - Parameters:
+    ///  - textSearch: Текст имени фото
+    ///  - completion: Блок обрабатывающий запрос
     func searchPhoto(textSearch: String, completion: @escaping (Result<[CollectionPhoto], FriendsError>) -> Void)
 }
 

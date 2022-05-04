@@ -35,6 +35,7 @@ final class SearchPhotoViewController: UIViewController {
     var fileManager: HashImageService?
     
     /// Инициализтор
+    /// - Parameter output: протокол для исходящих событий
     init(output: SearchPhotoViewOutput) {
         self.output = output
         super.init(nibName: nil, bundle: nil)
@@ -86,6 +87,7 @@ extension SearchPhotoViewController: UICollectionViewDelegate {
     
     /// Действие при выделении итема
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.output.viewDidSelectPhoto(id: searchResultsModel[indexPath.row].id)
         castomView.collectionView.deselectItem(at: indexPath, animated: true)
     }
 }

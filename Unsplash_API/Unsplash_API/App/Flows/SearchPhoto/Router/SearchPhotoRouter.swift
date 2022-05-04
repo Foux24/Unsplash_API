@@ -20,8 +20,7 @@ final class SearchPhotoRouter: SearchPhotoRouterInput {
     
     /// Переход на контроллер с деталями к фото
     func viewDidSelectPhoto(id: String) {
-//        let detailsPhotoViewController = DetailsPhotoBuilder.build()
-//        detailsPhotoViewController.id = id
-//        viewController?.navigationController?.pushViewController(detailsPhotoViewController, animated: true)
+        let detailsPhotoViewController = DetaildPhotoBuilder.build(id: id)
+        viewController?.navigationController?.pushViewController(detailsPhotoViewController, animated: true)
     }
 }
