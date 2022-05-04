@@ -12,6 +12,13 @@
 		594992F3282248E000E8F3A4 /* LikedPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594992F2282248E000E8F3A4 /* LikedPhotoViewController.swift */; };
 		594992F72822493E00E8F3A4 /* SearchPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594992F62822493E00E8F3A4 /* SearchPhotoViewController.swift */; };
 		594992F92822496F00E8F3A4 /* SearchPhotoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594992F82822496F00E8F3A4 /* SearchPhotoBuilder.swift */; };
+		594992FC28224ACD00E8F3A4 /* Extension+UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594992FB28224ACD00E8F3A4 /* Extension+UICollectionViewCell.swift */; };
+		594992FE28224AF500E8F3A4 /* Extension+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594992FD28224AF500E8F3A4 /* Extension+UITableViewCell.swift */; };
+		5949930128224BD000E8F3A4 /* ModelCollectionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949930028224BD000E8F3A4 /* ModelCollectionPhoto.swift */; };
+		5949930328224BED00E8F3A4 /* ModelDetailPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949930228224BED00E8F3A4 /* ModelDetailPhoto.swift */; };
+		5949930628224C4000E8F3A4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5949930528224C4000E8F3A4 /* Alamofire */; };
+		5949930828224C5400E8F3A4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949930728224C5400E8F3A4 /* NetworkService.swift */; };
+		5949930A28224CD600E8F3A4 /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949930928224CD600E8F3A4 /* Extension+UIImageView.swift */; };
 		59B4044C282241FC00A3262E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B4044B282241FC00A3262E /* AppDelegate.swift */; };
 		59B4044E282241FC00A3262E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B4044D282241FC00A3262E /* SceneDelegate.swift */; };
 		59B40455282241FD00A3262E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B40454282241FD00A3262E /* Assets.xcassets */; };
@@ -24,6 +31,12 @@
 		594992F2282248E000E8F3A4 /* LikedPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPhotoViewController.swift; sourceTree = "<group>"; };
 		594992F62822493E00E8F3A4 /* SearchPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoViewController.swift; sourceTree = "<group>"; };
 		594992F82822496F00E8F3A4 /* SearchPhotoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoBuilder.swift; sourceTree = "<group>"; };
+		594992FB28224ACD00E8F3A4 /* Extension+UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UICollectionViewCell.swift"; sourceTree = "<group>"; };
+		594992FD28224AF500E8F3A4 /* Extension+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewCell.swift"; sourceTree = "<group>"; };
+		5949930028224BD000E8F3A4 /* ModelCollectionPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCollectionPhoto.swift; sourceTree = "<group>"; };
+		5949930228224BED00E8F3A4 /* ModelDetailPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailPhoto.swift; sourceTree = "<group>"; };
+		5949930728224C5400E8F3A4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5949930928224CD600E8F3A4 /* Extension+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
 		59B40448282241FC00A3262E /* Unsplash_API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplash_API.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B4044B282241FC00A3262E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59B4044D282241FC00A3262E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5949930628224C4000E8F3A4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +129,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		594992FA28224A6200E8F3A4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				594992FB28224ACD00E8F3A4 /* Extension+UICollectionViewCell.swift */,
+				594992FD28224AF500E8F3A4 /* Extension+UITableViewCell.swift */,
+				5949930928224CD600E8F3A4 /* Extension+UIImageView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		594992FF28224B9300E8F3A4 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				5949930728224C5400E8F3A4 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
 		59B4043F282241FC00A3262E = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +209,8 @@
 		59B404622822427400A3262E /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				5949930028224BD000E8F3A4 /* ModelCollectionPhoto.swift */,
+				5949930228224BED00E8F3A4 /* ModelDetailPhoto.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -184,6 +218,7 @@
 		59B404632822427B00A3262E /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				594992FF28224B9300E8F3A4 /* NetworkService */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -208,6 +243,7 @@
 		59B40466282242A700A3262E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				594992FA28224A6200E8F3A4 /* Extension */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -228,6 +264,9 @@
 			dependencies = (
 			);
 			name = Unsplash_API;
+			packageProductDependencies = (
+				5949930528224C4000E8F3A4 /* Alamofire */,
+			);
 			productName = Unsplash_API;
 			productReference = 59B40448282241FC00A3262E /* Unsplash_API.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +295,9 @@
 				Base,
 			);
 			mainGroup = 59B4043F282241FC00A3262E;
+			packageReferences = (
+				5949930428224C4000E8F3A4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 59B40449282241FC00A3262E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,11 +326,17 @@
 			files = (
 				594992ED2822486700E8F3A4 /* LikedPhotoBuilder.swift in Sources */,
 				594992F92822496F00E8F3A4 /* SearchPhotoBuilder.swift in Sources */,
+				5949930328224BED00E8F3A4 /* ModelDetailPhoto.swift in Sources */,
+				5949930128224BD000E8F3A4 /* ModelCollectionPhoto.swift in Sources */,
 				594992F72822493E00E8F3A4 /* SearchPhotoViewController.swift in Sources */,
+				594992FC28224ACD00E8F3A4 /* Extension+UICollectionViewCell.swift in Sources */,
 				594992E92822478D00E8F3A4 /* TabBarController.swift in Sources */,
+				5949930A28224CD600E8F3A4 /* Extension+UIImageView.swift in Sources */,
 				594992F3282248E000E8F3A4 /* LikedPhotoViewController.swift in Sources */,
 				59B4044C282241FC00A3262E /* AppDelegate.swift in Sources */,
 				59B4044E282241FC00A3262E /* SceneDelegate.swift in Sources */,
+				5949930828224C5400E8F3A4 /* NetworkService.swift in Sources */,
+				594992FE28224AF500E8F3A4 /* Extension+UITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +544,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5949930428224C4000E8F3A4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5949930528224C4000E8F3A4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5949930428224C4000E8F3A4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 59B40440282241FC00A3262E /* Project object */;
 }
