@@ -23,7 +23,7 @@ final class LikedPhotoTableViewCell: UITableViewCell {
     }()
     
     
-    /// Определим UILabel с автором фото
+    /// UILabel с автором фото
     private(set) lazy var nameAuthorLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)

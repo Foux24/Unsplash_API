@@ -9,13 +9,16 @@ import UIKit
 
 /// Входящий протокол роутера
 protocol SearchPhotoRouterInput {
+    
+    /// Переход на экран с деталями фото
+    /// - Parameter id: id фото
     func viewDidSelectPhoto(id: String)
 }
 
 // MARK: - SearchPhotoRouter
 final class SearchPhotoRouter: SearchPhotoRouterInput {
     
-    /// Ссылка на вью контроллер
+    /// вью контроллер
     weak var viewController: UIViewController?
     
     /// Переход на контроллер с деталями к фото

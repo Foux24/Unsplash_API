@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - CollectionPhoto
+// MARK: - SearchCollectionPhoto
 struct SearchCollectionPhoto: Codable {
     var results: [CollectionPhoto]
 }

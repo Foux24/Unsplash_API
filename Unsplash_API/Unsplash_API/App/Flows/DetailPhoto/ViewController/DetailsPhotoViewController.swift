@@ -11,17 +11,17 @@ import RealmSwift
 /// Входящий протокол контроллера
 protocol DetailsPhotoViewInput: AnyObject {
     
-    /// Модель детали фото
-    var detailsPhoto: DetailPhoto { get set }
-        
-    /// Модель фото реалм
-    var realmModel: RealmModelPhoto { get set }
-    
     /// Показать алерт
     ///  - Parameters:
     ///   - title: Заголовок,
     ///   - message: Сообщение
     func showAlert(title: String, message: String) -> Void
+    
+    /// Модель детали фото
+    var detailsPhoto: DetailPhoto { get set }
+        
+    /// Модель фото реалм
+    var realmModel: RealmModelPhoto { get set }
 }
 
 // MARK: - DetailsPhotoViewController
@@ -132,14 +132,14 @@ private extension DetailsPhotoViewController {
         }
     }
     
-    /// Добавление обьекта в реалм
+    /// Добавление обьекта в реалм и вызов алерта
     func addPhotoFavorites() {
         try? realm?.add(object: realmModel)
         castomView.elseTrueFavorites()
         output.showAlertAddPhotoInDB()
     }
     
-    /// Удаление обьекта из реалм-а
+    /// Удаление обьекта из реалм-а и вызов алерта
     func deletPhotoFavorit() {
         for objectRealm in likedPhoto! {
             if objectRealm.id == id {

@@ -15,7 +15,7 @@ final class LikedPhotoPresentor {
     weak var viewInput: LikedPhotoViewInput?
     
     /// Ссылка на роутер экрана
-    let router: LikedPhotoRouterInput
+    private let router: LikedPhotoRouterInput
     
     /// Инициализтор
     init(router: LikedPhotoRouterInput) {
