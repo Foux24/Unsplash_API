@@ -6,7 +6,7 @@
 //
 
 /// Выходящий проктол событий для контроллера
-protocol SearchPhotoViewOutput: AnyObject {
+protocol SearchPhotoViewOutput {
     
     /// Поиск фотографий по имени
     ///  - Parameter query: Искомый текст
