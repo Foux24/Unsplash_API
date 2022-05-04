@@ -12,7 +12,15 @@ class SearchPhotoBuilder {
     
     /// Билд контроллера для поиска фото
     static func build() -> UIViewController {
-        let viewController = SearchPhotoViewController()
+        let networkService = NetworkService()
+        let interactor = SearchPhotoInteractor(networkService: networkService)
+        let router = SearchPhotoRouter()
+        let presenter = SearchPhotoPresentor(interactor: interactor, router: router)
+        let viewController = SearchPhotoViewController(output: presenter)
+        
+        router.viewController = viewController
+        presenter.viewInput = viewController
+        
         return viewController
     }
 }

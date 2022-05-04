@@ -8,8 +8,17 @@
 import Foundation
 import Alamofire
 
+/*
+ Network Service - Сервис для работы с сетью
+ Реализуем 3 запроса:
+ 1. Получение рендомных фотографий
+ 2. Получение Фотографий по искомому тексту
+ 3. Получение детайлей к фото
+ */
+
+
 /// Входящий протокол нетворк сервиса
-protocol RequestApiServiceInput: AnyObject {
+protocol NetworkServiceOtput: AnyObject {
     func loadRendomPhoto(completion: @escaping (Result<[CollectionPhoto], FriendsError>) -> Void)
     func searchPhoto(textSearch: String, completion: @escaping (Result<[CollectionPhoto], FriendsError>) -> Void)
     func getDetailPhoto(id: String, completion: @escaping (Result<DetailPhoto, FriendsError>) -> Void)
@@ -37,8 +46,8 @@ enum FriendsError: Error {
     case requestError(Error)
 }
 
-// MARK: - Request Api Unsplash
-final class RequestApiService {
+// MARK: - NetworkService
+final class NetworkService {
     
     /// Протокол
     private let scheme: String = "https"
@@ -51,7 +60,7 @@ final class RequestApiService {
 }
 
 // MARK: - Extension RequestApiService on the RequestApiServiceInput
-extension RequestApiService: RequestApiServiceInput {
+extension NetworkService: NetworkServiceOtput {
     
     /// Получение рендомных фотографии
     func loadRendomPhoto(completion: @escaping (Result<[CollectionPhoto], FriendsError>) -> Void) {
@@ -122,7 +131,7 @@ extension RequestApiService: RequestApiServiceInput {
 }
 
 // MARK: - Private
-private extension RequestApiService {
+private extension NetworkService {
     
     /// Конфигурация url
     func configureUrl(apiKey: ApiKey,
