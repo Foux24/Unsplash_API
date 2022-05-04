@@ -15,7 +15,7 @@ final class DetailsPhotoPresentor {
     weak var viewInput: DetailsPhotoViewInput?
     
     /// Ссылка на интерактор
-    let interactor: DetailsPhotoInteractor
+    private let interactor: DetailsPhotoInteractor
     
     /// Инициализтор
     init(interactor: DetailsPhotoInteractor) {
@@ -26,7 +26,10 @@ final class DetailsPhotoPresentor {
 // MARK: - Extension DetailsPhotoPresentor on the DetailsPhotoViewOutput
 extension DetailsPhotoPresentor: DetailsPhotoViewOutput {
 
-    /// Запрос к серверу на получени данных о фото ( сразу наполним модельку реалма данными )
+    /// Запрос к серверу на получени данных о фото и наполнение данными модели реалма
+    /// - Parameters:
+    ///  - id: id фото
+    ///  - completion: блок обрабатывающий запрос
     func viewDidDetailsPhoto(id: String, complition: @escaping () -> Void) {
         interactor.getDetailPhoto(id: id) { [weak self] result in
             guard let self = self else { return }
@@ -36,12 +39,15 @@ extension DetailsPhotoPresentor: DetailsPhotoViewOutput {
                 self.configerationObjectRealm(object: detailPhoto)
                 complition()
             case .failure(let error):
-                print(error)
+                self.viewInput?.showAlert(title: "Error", message: "\(error)")
             }
         }
     }
     
     /// Для форматирования времени с сервера
+    /// - Parameters:
+    ///  - dateString: Дата в формате String
+    ///  - format: формат даты
     func dateFromString(_ dateString: String, format: String) -> String? {
         let dateFormatter = DateFormatter()
         let tempLocale = dateFormatter.locale
@@ -59,21 +65,25 @@ extension DetailsPhotoPresentor: DetailsPhotoViewOutput {
         let dateString = dateFormatter.string(from: getdate)
         return dateString
       }
+
+    /// Алерт на удаления фото
+    func showAlertDeletPhotoInDB() -> Void {
+        self.viewInput?.showAlert(title: "Удаленно", message: "Фотография удалена")
+    }
+    
+    /// Алерт на добавление фото
+    func showAlertAddPhotoInDB() -> Void {
+        self.viewInput?.showAlert(title: "Добавлено", message: "Фотография добавлена")
+    }
+}
+
+// MARK: - Private
+private extension DetailsPhotoPresentor {
     
     /// С конфигурируем данными модельку реалма для добавления ее в БД
     func configerationObjectRealm(object: DetailPhoto) -> Void {
         self.viewInput?.realmModel.id = object.id ?? ""
         self.viewInput?.realmModel.url = object.urls?.thumb ?? ""
         self.viewInput?.realmModel.nameAuthor = object.user?.username ?? ""
-    }
-    
-    ///  Алерт на удаления фото
-    func showAlertDeletPhotoInDB() -> Void {
-        self.viewInput?.showAlert(title: "Удаленно", message: "Фотография удалена")
-    }
-    
-    ///  Алерт на добавление фото
-    func showAlertAddPhotoInDB() -> Void {
-        self.viewInput?.showAlert(title: "Добавлено", message: "Фотография добавлена")
     }
 }

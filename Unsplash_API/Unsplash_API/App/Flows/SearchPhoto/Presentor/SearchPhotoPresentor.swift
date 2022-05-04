@@ -14,10 +14,10 @@ final class SearchPhotoPresentor {
     weak var viewInput: SearchPhotoViewInput?
     
     /// Interactor
-    let interactor: SearchPhotoInteractorInput
+    private let interactor: SearchPhotoInteractorInput
     
     /// router
-    let router: SearchPhotoRouterInput
+    private let router: SearchPhotoRouterInput
     
     /// Инициализтор
     ///  - Parameters:

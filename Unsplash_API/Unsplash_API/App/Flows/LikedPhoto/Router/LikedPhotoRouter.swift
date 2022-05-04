@@ -9,6 +9,7 @@ import UIKit
 
 /// Входящий протокол роутера
 protocol LikedPhotoRouterInput {
+    
     /// Переход на экран с деталями к фото
     ///  - Parameter id: id фото
     func viewDidSelectPhoto(id: String)

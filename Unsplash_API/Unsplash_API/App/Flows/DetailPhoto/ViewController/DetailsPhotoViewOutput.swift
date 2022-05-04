@@ -7,6 +7,7 @@
 
 /// Исходящий протокол событий для контроллера
 protocol DetailsPhotoViewOutput: AnyObject {
+    
     /// Зпрос для получения деталей фото
     /// - Parameters:
     ///  - id: id фото
@@ -14,6 +15,9 @@ protocol DetailsPhotoViewOutput: AnyObject {
     func viewDidDetailsPhoto(id: String, complition: @escaping () -> Void)
     
     /// Форматирование даты
+    /// - Parameters:
+    ///  - dateString: Дата в формате String
+    ///  - format: формат даты
     func dateFromString(_ dateString: String,  format: String) -> String?
     
     /// Показ алерта при добавлении фото в БД

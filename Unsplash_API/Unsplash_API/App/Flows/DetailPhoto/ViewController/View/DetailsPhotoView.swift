@@ -11,10 +11,10 @@ import SnapKit
 // MARK: - View для DetailsPhotoViewController
 final class DetailsPhotoView: UIView {
     
-    /// зададим скролл вью
+    /// ScrollView
     private(set) lazy var scrollView = UIScrollView()
     
-    /// Определим UIImageView
+    /// UIImageView
     private(set) lazy var imageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFill
@@ -22,7 +22,7 @@ final class DetailsPhotoView: UIView {
         return image
     }()
     
-    /// Определим UILabel с автором фото
+    /// UILabel с автором фото
     private(set) lazy var nameAuthorLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
@@ -31,7 +31,7 @@ final class DetailsPhotoView: UIView {
         return label
     }()
     
-    /// определим UILabel дата создания фото
+    /// UILabel дата создания фото
     private(set) lazy var dateCreatLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
@@ -40,7 +40,7 @@ final class DetailsPhotoView: UIView {
         return label
     }()
     
-    /// Определим UILabel место создания фото
+    /// UILabel место создания фото
     private(set) lazy var locationLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
@@ -50,7 +50,7 @@ final class DetailsPhotoView: UIView {
         return label
     }()
     
-    /// Определим UILabel с количеством загрузок
+    /// UILabel с количеством загрузок
     private(set) lazy var downloadLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
@@ -100,7 +100,7 @@ final class DetailsPhotoView: UIView {
 // MARK: - Private
 private extension DetailsPhotoView {
     
-    /// Определим метод в растоновко UI элементов на скрол вью
+    /// Add UI
     func setupUIElementsInScrolView() {
         self.backgroundColor = .white
         scrollView.addSubview(imageView)

@@ -9,8 +9,11 @@ import UIKit
 
 /// Входящий протокол контроллера
 protocol SearchPhotoViewInput: AnyObject {
-    var fileManager: HashImageService? { get set }
+    
+    /// Массив с фото
     var searchResultsModel: [CollectionPhoto] { get set }
+    
+    /// Массив с урл фото
     var searchResults: [String] { get set }
 }
 
@@ -32,7 +35,7 @@ final class SearchPhotoViewController: UIViewController {
     var searchResultsModel = [CollectionPhoto]()
     
     /// Для кеша изоборажений
-    var fileManager: HashImageService?
+    private var fileManager: HashImageService?
     
     /// Инициализтор
     /// - Parameter output: протокол для исходящих событий

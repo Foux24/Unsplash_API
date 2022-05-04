@@ -10,6 +10,7 @@ import RealmSwift
 
 /// Входящий протокол контроллера
 protocol LikedPhotoViewInput: AnyObject {
+    
     /// Показать алерт
     ///  - Parameters:
     ///   - title: Заголовок,
@@ -64,13 +65,15 @@ final class LikedPhotoViewController: UIViewController {
     }
 }
 
-// MARK: Extension - DataSource and Delegate
+// MARK: - Extension LikedPhotoViewController on the UITableViewDataSource
 extension LikedPhotoViewController: UITableViewDataSource {
     
+    /// Кол-во ячеек в секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return likedPhoto?.count ?? 0
     }
     
+    /// Данные для ячейки
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = castomView.tableView.dequeueReusableCell(forIndexPath: indexPath) as LikedPhotoTableViewCell
         let objectPhoto: RealmModelPhoto = likedPhoto![indexPath.row]
@@ -79,6 +82,7 @@ extension LikedPhotoViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Extension LikedPhotoViewController on the UITableViewDelegate
 extension LikedPhotoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.output.viewDidSelectPhoto(id: likedPhoto![indexPath.row].id)
@@ -118,7 +122,7 @@ private extension LikedPhotoViewController {
     }
 }
 
-/// Расширим клас на проктол
+// MARK: - Extension LikedPhotoViewController on the LikedPhotoViewInput
 extension LikedPhotoViewController: LikedPhotoViewInput {
     /// Показ алерта
     func showAlert(title: String, message: String) -> Void {

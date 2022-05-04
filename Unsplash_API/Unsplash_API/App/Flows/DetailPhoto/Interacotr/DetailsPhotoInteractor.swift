@@ -17,7 +17,7 @@ protocol DetailsPhotoInteractorInput {
     func getDetailPhoto(id: String, completion: @escaping (Result<DetailPhoto, FriendsError>) -> Void)
 }
 
-// MARK: - Интереактор
+// MARK: - DetailsPhotoInteractor
 final class DetailsPhotoInteractor {
     
     /// NetworkService

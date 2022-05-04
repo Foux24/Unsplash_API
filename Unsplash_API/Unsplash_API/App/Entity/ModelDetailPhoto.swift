@@ -18,17 +18,17 @@ struct DetailPhoto: Codable {
 
 }
 
-// MARK: - Location
+// MARK: - DetailLocation
 struct DetailLocation: Codable {
     var title: String?
 }
 
-// MARK: - Urls
+// MARK: - DetailUrls
 struct DetailUrls: Codable {
     var raw, full, regular, thumb, small: String?
 }
 
-// MARK: - User
+// MARK: - DetailUser
 struct DetailUser: Codable {
     var username, name: String?
 }
