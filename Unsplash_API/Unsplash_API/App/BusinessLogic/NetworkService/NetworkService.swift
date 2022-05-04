@@ -13,7 +13,7 @@ import Alamofire
  */
 
 /// Входящий протокол нетворк сервиса
-protocol NetworkServiceOtput: AnyObject {
+protocol NetworkServiceOtput {
     func loadRendomPhoto(completion: @escaping (Result<[CollectionPhoto], FriendsError>) -> Void)
     func searchPhoto(textSearch: String, completion: @escaping (Result<[CollectionPhoto], FriendsError>) -> Void)
     func getDetailPhoto(id: String, completion: @escaping (Result<DetailPhoto, FriendsError>) -> Void)

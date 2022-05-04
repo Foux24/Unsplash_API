@@ -6,7 +6,7 @@
 //
 
 /// Исходящий протокол событий контроллера
-protocol LikedPhotoViewOutput: AnyObject {
+protocol LikedPhotoViewOutput {
     
     /// Переход на экран с деталями фото
     ///  - Parameter id: id фото

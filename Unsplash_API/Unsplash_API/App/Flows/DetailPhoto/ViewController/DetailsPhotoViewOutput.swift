@@ -6,7 +6,7 @@
 //
 
 /// Исходящий протокол событий для контроллера
-protocol DetailsPhotoViewOutput: AnyObject {
+protocol DetailsPhotoViewOutput {
     
     /// Зпрос для получения деталей фото
     /// - Parameters:
