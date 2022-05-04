@@ -12,7 +12,11 @@ final class LikedPhotoBuilder {
     
     /// Билд контроллера для поиска фото
     static func build() -> UIViewController {
-        let viewController = LikedPhotoViewController()
+        let router = LikedPhotoRouter()
+        let presenter = LikedPhotoPresentor(router: router)
+        let viewController = LikedPhotoViewController(output: presenter)
+        router.viewController = viewController
+        presenter.viewInput = viewController
         return viewController
     }
 }
